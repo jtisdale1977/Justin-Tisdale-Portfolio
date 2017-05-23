@@ -1,0 +1,845 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8">
+    <title>Justin Tisdale's Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <link rel="shortcut icon" href="/images/favicon.ico">
+
+    <!-- CSS -->
+    <link href="~/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/css/flexslider.css" rel="stylesheet" type="text/css" />
+    <link href="~/css/prettyPhoto.css" rel="stylesheet" type="text/css" />
+    <link href="~/css/animate.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="~/css/owl.carousel.css" rel="stylesheet">
+    <link href="~/css/style.css" rel="stylesheet" type="text/css" />
+    <link href="~/css/MathExcercises.css" rel="stylesheet" />
+    <link href="~/Content/SyntaxHighlighter/shCoreFadeToGrey.css" rel="stylesheet" />
+    <link href="~/Content/SyntaxHighlighter/shThemeFadeToGrey.css" rel="stylesheet" />
+
+    <!-- FONTS -->
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500italic,700,500,700italic,900,900italic' rel='stylesheet' type='text/css'>
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+
+    <!-- SCRIPTS -->
+    <!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+    <!--[if IE]><html class="ie" lang="en"> <![endif]-->
+
+    <script src="~/js/jquery.min.js" type="text/javascript"></script>
+    <script src="~/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="~/js/jquery.prettyPhoto.js" type="text/javascript"></script>
+    <script src="~/js/jquery.nicescroll.min.js" type="text/javascript"></script>
+    <script src="~/js/superfish.min.js" type="text/javascript"></script>
+    <script src="~/js/jquery.flexslider-min.js" type="text/javascript"></script>
+    <script src="~/js/owl.carousel.js" type="text/javascript"></script>
+    <script src="~/js/jquery.mb.YTPlayer.js" type="text/javascript"></script>
+    <script src="~/js/animate.js" type="text/javascript"></script>
+    <script src="~/js/jquery.BlackAndWhite.js"></script>
+    <script src="~/js/myscript.js" type="text/javascript"></script>
+    <script src="~/js/modernizr.custom.js"></script>
+    <script>
+
+		//PrettyPhoto
+		jQuery(document).ready(function() {
+			$("a[rel^='prettyPhoto']").prettyPhoto();
+		});
+
+		//BlackAndWhite
+		$(window).load(function(){
+			$('.client_img').BlackAndWhite({
+				hoverEffect : true, // default true
+				// set the path to BnWWorker.js for a superfast implementation
+				webworkerPath : false,
+				// for the images with a fluid width and height
+				responsive:true,
+				// to invert the hover effect
+				invertHoverEffect: false,
+				// this option works only on the modern browsers ( on IE lower than 9 it remains always 1)
+				intensity:1,
+				speed: { //this property could also be just speed: value for both fadeIn and fadeOut
+					fadeIn: 300, // 200ms for fadeIn animations
+					fadeOut: 300 // 800ms for fadeOut animations
+				},
+				onImageReady:function(img) {
+					// this callback gets executed anytime an image is converted
+				}
+			});
+		});
+
+    </script>
+
+</head>
+<body>
+
+    <!-- MENU BLOCK -->
+    <div class="menu_block">
+
+        <!-- CONTAINER -->
+        <div class="container clearfix">
+
+            <!-- LOGO -->
+            <div class="logo pull-left">
+                <a href="javascript:void(0)"><span class="b1">J</span><span class="b2">u</span><span class="b3">s</span><span class="b4">t</span><span class="b5">i</span><span class="b5">n</span></a>
+                <a href="javascript:void(0)"><span class="b1">T</span><span class="b2">i</span><span class="b3">s</span><span class="b4">d</span><span class="b5">a</span><span class="b5">l</span><span class="b5">e</span></a>
+            </div><!-- //LOGO -->
+            <!-- SEARCH FORM -->
+            @*<div id="search-form" class="pull-right">
+                    <form method="get" action="#">
+                        <input type="text" name="Search" value="Search" onFocus="if (this.value == 'Search') this.value = '';" onBlur="if (this.value == '') this.value = 'Search';" />
+                    </form>
+                </div>*@<!-- SEARCH FORM -->
+            <!-- MENU -->
+            <div class="pull-right">
+                <nav class="navmenu center">
+                    <ul>
+                        <li class="first active scroll_btn">@Html.ActionLink("Home", "Index")</li>
+                        <li class="scroll_btn">@Html.ActionLink("About Me", "Index")</li>
+                        <li class="scroll_btn">@Html.ActionLink("Featured Works", "Index")</li>
+                        <li class="scroll_btn">@Html.ActionLink("Referrals", "Index")</li>
+                        <li class="scroll_btn last">@Html.ActionLink("Contact", "Index")</li>
+                        <li class="sub-menu">
+                            <a href="javascript:void(0);">Portfolio</a>
+                            <ul>
+                                <li><a href="#">Java Script Excercises</a></li>
+                                <li><a href="http://jtisdale-blog.azurewebsites.net/" target="blank">Blog</a></li>
+                                <li><a href="http://jtisdale-bugtracker.azurewebsites.net/" target="blank">Bug Tracker</a></li>
+                                <li><a href="http://jtisdale-shoppingcart.azurewebsites.net/" target="blank">Shopping</a></li>
+                                <li><a href="#">Financial Planner</a></li>
+                                <li><a href="#">Car Finder</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div><!-- //MENU -->
+        </div><!-- //MENU BLOCK -->
+    </div><!-- //CONTAINER -->
+    <br/>
+    <br/>
+
+    <div class="container">
+        <br />
+        <br />
+        <br />
+        <h2>Javascript Excercises</h2>
+        <p></p>
+
+        <ul class="nav nav-tabs">
+            <li class="active"><a data-toggle="tab" href="#home">Fun With Numbers</a></li>
+            <li><a data-toggle="tab" href="#menu1">Factorial</a></li>
+            <li><a data-toggle="tab" href="#menu2">FizzBuzz</a></li>
+            <li><a data-toggle="tab" href="#menu3">Palindrome</a></li>
+        </ul>
+
+        <div class="tab-content">
+            <!--Fun With Numbers-->
+            <div id="home" class="tab-pane fade in active">
+                <br />
+                <!--Title in Jumbotron-->
+                <div class="jumbotron text-center" id="jumbo">
+                    <h1>Fun With Numbers</h1>
+                    <p><b>Have some fun finding the Largest, Smallest, Sum, Product, and Mean of numbers...</b></p>
+                </div>
+                <!-- Header -->
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="rowWhite">
+                                <div class="align center"><h1>Numbers</h1></div>
+                            </div>
+                        </div>
+                    </div>
+                    <br />
+                    <div class="row">
+                        <div class="col-md-1">
+                        </div>
+                        <!-- Number Input 1 -->
+                        <div class="col-md-2" align="center">
+                            <div class="rowWhite">
+                                <span class="label"></span><b> Enter Number here: </b><input type="number" id="num1" />
+                            </div>
+                        </div>
+                        <!-- Number Input 1 -->
+                        <div class="col-md-2" align="center">
+                            <div class="rowWhite">
+                                <span class="label"></span><b> Enter Number here: </b><input type="number" id="num2" />
+                            </div>
+                        </div>
+                        <!-- Number Input 3 -->
+                        <div class="col-md-2" align="center">
+                            <div class="rowWhite">
+                                <span class="label"></span><b> Enter Number here: </b><input type="number" id="num3" />
+                            </div>
+                        </div>
+                        <!-- Number Input 4 -->
+                        <div class="col-md-2" align="center">
+                            <div class="rowWhite">
+                                <span class="label"></span><b> Enter Number here: </b><input type="number" id="num4" />
+                            </div>
+                        </div>
+                        <!-- Number Input 5 -->
+                        <div class="col-md-2" align="center">
+                            <div class="rowWhite">
+                                <span class="label"></span><b> Enter Number here: </b><input type="number" id="num5" />
+                            </div>
+                        </div>
+                        <div class="col-md-1">
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-1">
+                        </div>
+                        <div class="col-md-2" align="center">
+                            <!-- Trigger the Max modal button -->
+                            <button class="md-trigger" data-modal="modal-13" id="newmax">Greatest</button>
+                            <div class="shadow"></div>
+
+                            <!-- Max Modal -->
+                            <div class="md-modal md-effect-13" id="modal-13">
+                                <div class="md-content">
+                                    <h3>The LARGEST number is:</h3>
+                                    <div>
+                                        <p id="modalresult1"></p>
+                                        <div class="col-md-12">
+                                            <pre class="brush: js;">
+                                                $("#newmax").click(function() {
+                                                var num1 = Number($("#num1").val());
+                                                var num2 = Number($("#num2").val());
+                                                var num3 = Number($("#num3").val());
+                                                var num4 = Number($("#num4").val());
+                                                var num5 = Number($("#num5").val());
+                                                var ttl = Math.max(num1, num2, num3, num4, num5);
+                                                $("#modalresult1").text(ttl);
+                                             </pre>
+                                        </div>
+                                        <button class="md-close">Close me!</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2" align="center">
+                            <!-- Trigger the Max modal button -->
+                            <button class="md-trigger" data-modal="modal-11" id="newmin">Least</button>
+                            <div class="shadow"></div>
+
+                            <!-- Max Modal -->
+                            <div class="md-modal md-effect-11" id="modal-11">
+                                <div class="md-content">
+                                    <h3>The SMALLEST number is:</h3>
+                                    <div>
+                                        <p id="modalresult2"></p>
+                                        <div class="col-md-12">
+                                            <pre class="brush: js;">
+                                                $("#newmin").click(function() {
+                                                var num1 = Number($("#num1").val());
+                                                var num2 = Number($("#num2").val());
+                                                var num3 = Number($("#num3").val());
+                                                var num4 = Number($("#num4").val());
+                                                var num5 = Number($("#num5").val());
+                                                var ttl = Math.min(num1, num2, num3, num4, num5);
+                                                $("#modalresult2").text(ttl);
+                                                });
+                                            </pre>
+                                        </div>
+                                        <button class="md-close">Close me!</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2" align="center">
+                            <!-- Trigger the Max modal button -->
+                            <button class="md-trigger" data-modal="modal-4" id="newsum">Sum</button>
+                            <div class="shadow"></div>
+
+                            <!-- Max Modal -->
+                            <div class="md-modal md-effect-4" id="modal-4">
+                                <div class="md-content">
+                                    <h3>The SUM of the numbers is:</h3>
+                                    <div>
+                                        <p id="modalresult3"></p>
+                                        <div class="col-md-12">
+                                            <pre class="brush: js;">
+													$("#newsum").click(function() {
+													var num1 = Number($("#num1").val());
+													var num2 = Number($("#num2").val());
+													var num3 = Number($("#num3").val());
+													var num4 = Number($("#num4").val());
+													var num5 = Number($("#num5").val());
+													var ttl = (num1 + num2 + num3 + num4 + num5);
+													$("#modalresult3").text(ttl);
+												</pre>
+                                        </div>
+                                        <button class="md-close">Close me!</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2" align="center">
+                            <!-- Trigger the Max modal button -->
+                            <button class="md-trigger" data-modal="modal-1" id="newprod">Product</button>
+                            <div class="shadow"></div>
+
+                            <!-- Max Modal -->
+                            <div class="md-modal md-effect-1" id="modal-1">
+                                <div class="md-content">
+                                    <h3>The PRODUCT of the numbers is:</h3>
+                                    <div>
+                                        <p id="modalresult4"></p>
+                                        <div class="col-md-12">
+                                            <pre class="brush: js;">
+													$("#newprod").click(function () {
+													var num1 = Number($("#num1").val());
+													var num2 = Number($("#num2").val());
+													var num3 = Number($("#num3").val());
+													var num4 = Number($("#num4").val());
+													var num5 = Number($("#num5").val());
+													var ttl = (num1 * num2 * num3 * num4 * num5);
+													$("#modalresult4").text(ttl);
+														});
+                                                </pre>
+                                        </div>
+                                        <button class="md-close">Close me!</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2" align="center">
+                            <!-- Trigger the Max modal button -->
+                            <button class="md-trigger" data-modal="modal-6" id="newmean">Mean</button>
+                            <div class="shadow"></div>
+
+                            <!-- Max Modal -->
+                            <div class="md-modal md-effect-6" id="modal-6">
+                                <div class="md-content">
+                                    <h3>The MEAN of the numbers is:</h3>
+                                    <div>
+                                        <p id="modalresult5"></p>
+                                        <div class="col-md-12">
+                                            <pre class="brush: js;">
+												$("#newmean").click(function () {
+													var num1 = Number($("#num1").val());
+													var num2 = Number($("#num2").val());
+													var num3 = Number($("#num3").val());
+													var num4 = Number($("#num4").val());
+													var num5 = Number($("#num5").val());
+													var ttl = ((num1 + num2 + num3 + num4 + num5) / 5);
+													$("#modalresult5").text(ttl);
+													});
+                                            </pre>
+                                        </div>
+                                        <button class="md-close">Close me!</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-1">
+                        </div>
+                    </div>
+                </div>
+
+
+                <script src="~/js/jquery.1.10.2.min.js"></script>
+                <!-- jquery function for MaxModal -->
+                <script>
+                    $("#newmax").click(function () {
+                        var num1 = Number($("#num1").val());
+                        var num2 = Number($("#num2").val());
+                        var num3 = Number($("#num3").val());
+                        var num4 = Number($("#num4").val());
+                        var num5 = Number($("#num5").val());
+                        var ttl = Math.max(num1, num2, num3, num4, num5);
+                        $("#modalresult1").text(ttl);
+                    });
+                </script>
+                <!-- jquery function for MinModal -->
+                <script>
+                    $("#newmin").click(function () {
+                        var num1 = Number($("#num1").val());
+                        var num2 = Number($("#num2").val());
+                        var num3 = Number($("#num3").val());
+                        var num4 = Number($("#num4").val());
+                        var num5 = Number($("#num5").val());
+                        var ttl = Math.min(num1, num2, num3, num4, num5);
+                        $("#modalresult2").text(ttl);
+                    });
+                </script>
+                <!-- jquery function for SumModal -->
+                <script>
+                    $("#newsum").click(function () {
+                        var num1 = Number($("#num1").val());
+                        var num2 = Number($("#num2").val());
+                        var num3 = Number($("#num3").val());
+                        var num4 = Number($("#num4").val());
+                        var num5 = Number($("#num5").val());
+                        var ttl = (num1 + num2 + num3 + num4 + num5);
+                        $("#modalresult3").text(ttl);
+                    });
+                </script>
+                <!-- jquery function for ProdModal -->
+                <script>
+                    $("#newprod").click(function () {
+                        var num1 = Number($("#num1").val());
+                        var num2 = Number($("#num2").val());
+                        var num3 = Number($("#num3").val());
+                        var num4 = Number($("#num4").val());
+                        var num5 = Number($("#num5").val());
+                        var ttl = (num1 * num2 * num3 * num4 * num5);
+                        $("#modalresult4").text(ttl);
+                    });
+                </script>
+                <!-- jquery function for MeanModal -->
+                <script>
+                    $("#newmean").click(function () {
+                        var num1 = Number($("#num1").val());
+                        var num2 = Number($("#num2").val());
+                        var num3 = Number($("#num3").val());
+                        var num4 = Number($("#num4").val());
+                        var num5 = Number($("#num5").val());
+                        var ttl = ((num1 + num2 + num3 + num4 + num5) / 5);
+                        $("#modalresult5").text(ttl);
+                    });
+                </script>
+
+                <script src="~/js/jquery.1.10.2.min.js"></script>
+                <!-- jquery function for Factorial Modal -->
+                <script>
+                    $("#newfact").click(function () {
+                        var factorial = Number($("#factorial").val());
+                        tempvalue = 1;
+                        for (i = factorial ; i > 0 ; i--) {
+                            tempvalue *= i;
+                        }
+                        $("#resultFact").text(tempvalue);
+                    });
+                </script>
+            </div>
+            <br/>
+            <!--Factorial-->
+            <div id="menu1" class="tab-pane fade">
+                <!--Title in Jumbotron-->
+                <div class="jumbotron text-center" id="jumbo">
+                    <h1>Factorial</h1>
+                    <p>
+                        <b>
+                            What is a <a href="https://en.wikipedia.org/wiki/Factorial">factorial</a>?...The factorial, symbolized by an exclamation mark (!), 
+                            is a quantity defined for all integers greater than or equal to 0. For an integer n greater than or equal to 1, the factorial is 
+                            the product of all integers less than or equal to n but greater than or equal to 1. The factorial value of 0 is defined as equal 
+                            to 1. The factorial values for negative integers are not defined. Mathematically, the formula for the factorial is as follows. 
+                            If n is an integer greater than or equal to 1, then n ! = n ( n - 1)( n - 2)( n - 3) ... (3)(2)(1). If p = 0, then p ! = 1 by convention.
+                        </b>
+                    </p>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <!-- Header above input box -->
+                            <div class="rowWhite">
+                                <div class="align center"><h3><b>Please enter number here</b></h3></div>
+                            </div>
+                        </div>
+                    </div>
+                    <br />
+                    <!-- Number Input -->
+                    <div class="row">
+                        <div class="col-lg-12 align center">
+                            <div class="rowWhite">
+                                <span class="label"></span><input type="number" id="factorial" />
+                            </div>
+                        </div>
+                    </div>
+                    <br />
+                    <div class="row">
+                        <div class="col-md-12 align center">
+                            <!-- Trigger the Max modal button -->
+                            <button class="md-trigger" data-modal="modal-5" id="newfact">Submit</button>
+                            <div class="shadow"></div>
+
+                            <!-- Max Modal -->
+                            <div class="md-modal md-effect-5" id="modal-5">
+                                <div class="md-content">
+                                    <h3>The FACTOR is:</h3>
+                                    <div>
+                                        <p id="resultFact"></p>
+                                        <p id="errorFact"></p>
+                                        <div class="col-md-12">
+                                            <pre class="brush: js;">
+												<!-- place Factorial formula here for syntaxhighlighter -->
+												$("#newfact").click(function () {
+												var factorial = Number($("#factorial").val());
+												tempvalue = 1;
+												for (i = factorial ; i > 0 ; i--) {
+													tempvalue *= i;
+												}
+												$("#resultFact").text(tempvalue);
+														});
+												<!-- place Factorial formula here for syntaxhighlighter -->
+											</pre>
+                                        </div>
+                                        <button class="md-close">Close me!</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <script src="~/js/jquery.1.10.2.min.js"></script>
+                    <!-- jquery function for Factorial Modal -->
+                    <script>
+                        $("#newfact").click(function () {
+                            var factorial = Number($("#factorial").val());
+                            tempvalue = 1;
+                            if ($.trim($("#resultFact").text()) != "") {
+                                $("#resultFact").empty();
+                            }
+                            if ((factorial == 0)) {
+                                $("#errorFact").empty();
+                                $("#errorFact").append("<p>Really?!? Enter a number please!</p>");
+                            }
+                            else if (factorial < 0) {
+                                $("#errorFact").empty();
+                                $("#errorFact").append("<p>Try being more positive instead of so negative!</p>");
+                            }
+                            else if (factorial > 170) {
+                                $("#errorFact").empty();
+                                $("#errorFact").append("<p>This number's factor is too long to display!</p>");
+                            }
+                            else if ((factorial % 1) != 0) {
+                                $("#errorFact").empty();
+                                $("#errorFact").append("<p>um...Whole numbers please!</p>");
+                            }
+                            else {
+                                if (factorial >= 0) {
+                                    $("#errorFact").empty();
+                                    for (i = factorial ; i > 0 ; i--) {
+                                        tempvalue *= i;
+                                    }
+                                    $("#resultFact").text(tempvalue);
+                                 }
+                            }
+                        });
+                    </script>
+                </div>
+            </div>
+            <br/>
+            <!--FizzBuzz-->
+            <div id="menu2" class="tab-pane fade">
+                <br />
+                <!--Title in Jumbotron-->
+                <div class="jumbotron text-center" id="jumbo">
+                    <h1>FizzBuzz</h1>
+                    <p>
+                        <b>
+                            Enter two numbers between 1 and 100 and see if it can display -fizz- for multiples of the first number,<br />
+                            -buzz- for multiples of the second number and -fizzbuzz- for multiples of the both numbers.
+                        </b>
+                    </p>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <!-- Header -->
+                            <div class="rowWhite">
+                                <div class="align center"><h3><b>Please enter your numbers below:    </b></h3></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                        </div>
+                        <div class="col-md-2" align="center">
+                            <!-- Number Input 1 -->
+                            <div class="rowWhite">
+                                <span class="label"></span><b> Enter Number here: </b><input type="number" id="fizz1" />
+                            </div>
+                        </div>
+                        <div class="col-md-2" align="center">
+                            <!-- Number Input 2 -->
+                            <div class="rowWhite">
+                                <span class="label"></span><b> Enter Number here: </b><input type="number" id="fizz2" />
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                        </div>
+                    </div>
+                    <br />
+                    <br />
+                    <div class="row">
+                        <div class="col-md-12 align center">
+                            <!-- Trigger the Max modal button -->
+                            <button class="md-trigger" data-modal="modal-14" id="newfizz">Submit</button>
+                            <div class="shadow"></div>
+
+                            <!-- Max Modal -->
+                            <div class="md-modal md-effect-14" id="modal-14">
+                                <div class="md-content">
+                                    <h3>FizzBuzz</h3>
+                                    <div>
+                                        <p id="fizzresult"></p>
+                                        <div class="col-md-12">
+                                            <pre class="brush: js;">
+													$('#newfizz').click(function () {
+														var fizz1 = $('#fizz1').val();
+														var fizz2 = $('#fizz2').val();
+														$('#fizzresult').text('');
+														var output = "0";
+														for (var i = 1; i <= 100; i++) {
+															if ((i % fizz1 === 0) && (i % fizz2 === 0)) {
+																output = output + "\n" + "FizzBuzz, ";
+															}
+															else if (i % fizz1 == 0) {
+																output = output + "\n" + "Fizz, ";
+															}
+															else if (i % fizz2 == 0) {
+																output = output + "\n" + "Buzz, ";
+															}
+															else {
+																output = output + "\n" + i;
+															}
+														}
+														$('#fizzresult').text(output);
+													});
+												</pre>
+                                        </div>
+                                        <button class="md-close">Close me!</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <script src="~/js/jquery.1.10.2.min.js"></script>
+                    <!-- jquery function for FizzBuzz Modal -->
+                    <script>
+                        $('#newfizz').click(function () {
+                            var fizz1 = $('#fizz1').val();
+                            var fizz2 = $('#fizz2').val();
+                            $('#fizzresult').text('');
+                            var output = "0";
+                            for (var i = 1; i <= 100; i++) {
+                                if ((i % fizz1 === 0) && (i % fizz2 === 0)) {
+                                    output = output + "\n" + "FizzBuzz, ";
+                                }
+                                else if (i % fizz1 == 0) {
+                                    output = output + "\n" + "Fizz, ";
+                                }
+                                else if (i % fizz2 == 0) {
+                                    output = output + "\n" + "Buzz, ";
+                                }
+                                else {
+                                    output = output + "\n" + i;
+                                }
+                            }
+                            //output = output.substring(0, output.length - 2);
+                            $('#fizzresult').text(output);
+                        });
+                    </script>
+                </div>
+            </div>
+            <br/>
+            <!--Palindrome-->
+            <div id="menu3" class="tab-pane fade">
+                <br />
+                <!--Title in Jumbotron-->
+                <div class="jumbotron text-center" id="jumbo">
+                    <h1>Palindrome</h1>
+                    <p><b>A <a href="https://en.wikipedia.org/wiki/Palindrome">palindrome</a> is a word, phrase, number, or other sequence of characters which reads the same backward or forward. This program is designed the test for a possible Palindrome...</b></p>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <!-- Header above input box -->
+                            <div class="rowWhite">
+                                <div class="align center"><h3><b>Please enter your word, phrase, or number here:</b></h3></div>
+                            </div>
+                        </div>
+                    </div>
+                    <br />
+                    <div class="row">
+                        <div class="col-md-3"></div>
+                        <div class="col-md-6 align center">
+                            <!-- Text Input -->
+                            <div class="rowWhite">
+                                <span class="label"></span><input type="text" id="pal1" />
+                            </div>
+                        </div>
+                        <div class="col-md-3"></div>
+                    </div>
+                    <br />
+                    <div class="row">
+                        <div class="col-md-12 align center">
+                            <!-- Trigger the Max modal button -->
+                            <button class="md-trigger" data-modal="modal-8" id="newpal">Submit</button>
+                            <div class="shadow"></div>
+
+                            <!-- Max Modal -->
+                            <div class="md-modal md-effect-8" id="modal-8">
+                                <div class="md-content">
+                                    <h3>Palindrome</h3>
+                                    <div>
+                                        <p id="resultPal"></p>
+                                        <div class="col-md-12">
+                                            <pre class="brush: js;">
+												<!-- place Palindrome formula here for syntaxhighlighter -->
+													$('#newpal').click(function () {
+													var input = $('#pal1').val().toLowerCase();
+													var msg = "";
+													if (input == input.split('').reverse().join('')) {
+														msg = "Yes, " + input + " is a Palindrome";
+													}
+													else {
+														msg = "No, " + input + " is not a Palindrome";
+													}
+													$('#resultPal').text(msg);
+												<!-- place Palindrome formula here for syntaxhighlighter -->
+												</pre>
+                                        </div>
+                                        <button class="md-close">Close me!</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <script src="~/js/jquery.1.10.2.min.js"></script>
+                    <!-- jquery function for Palindrome Modal -->
+                    <script>
+                        $('#newpal').click(function () {
+                            var input = $('#pal1').val().toLowerCase();
+                            var msg = "";
+                            if (input == input.split('').reverse().join('')) {
+                                msg = "Yes, " + input + " is a Palindrome";
+                            }
+                            else {
+                                msg = "No, " + input + " is not a Palindrome";
+                            }
+                            $('#resultPal').text(msg);
+                        });
+                    </script>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <br/>
+
+    <!-- CONTAINER -->
+    <div class="flex-container" id="foot">
+        <div class="footer-top-area">
+            <div class="zigzag-bottom"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-md-4 col-sm-6 padbot30">
+                        <h4><b>Hardened</b> Concepts</h4>
+                        <div class="recent_posts_small clearfix">
+                            <div class="post_item_img_small">
+                                <img src="/images/blog/fluid.jpg" alt="" />
+                            </div>
+                            <div class="post_item_content_small">
+                                <a class="title">Philips Fluid Smartphone</a>
+                                <ul class="post_item_inf_small">
+                                    <li><a href="http://jtisdale-shoppingcart.azurewebsites.net/" target="blank" class="btn btn-link btn-xs" role="button">Shop Now</a>  $599.99</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="recent_posts_small clearfix">
+                            <div class="post_item_img_small">
+                                <img src="/images/blog/SN.jpg" alt="" />
+                            </div>
+                            <div class="post_item_content_small">
+                                <a class="title">Sony Nextep PC Phone</a>
+                                <ul class="post_item_inf_small">
+                                    <li><a href="http://jtisdale-shoppingcart.azurewebsites.net/" target="blank" class="btn btn-link btn-xs" role="button">Shop Now</a>  $1099.99</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="recent_posts_small clearfix">
+                            <div class="post_item_img_small">
+                                <img src="/images/blog/cp.jpg" alt="" />
+                            </div>
+                            <div class="post_item_content_small">
+                                <a class="title">Drasphone</a>
+                                <ul class="post_item_inf_small">
+                                    <li><a href="http://jtisdale-shoppingcart.azurewebsites.net/" target="blank" class="btn btn-link btn-xs" role="button">Shop Now</a>   $1599.99</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-4 col-sm-6 padbot30 foot_about_block">
+                        <h4><b>About</b> me</h4>
+                        <p>I value people over profits, quality over quantity, and keeping it real. As such, I deliver an unmatched working relationship with my clients.</p>
+                        <p>I am resourceful, eclectic, and skilled; with my coding expertise, I provide sharp and powerful resolution</p>
+                        <ul class="social">
+                            <li><a href="https://twitter.com/" target="blank"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="https://www.facebook.com/" target="blank"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="https://plus.google.com" target="blank"><i class="fa fa-google-plus"></i></a></li>
+                            <li><a href="https://www.pinterest.com/" target="blank"><i class="fa fa-pinterest-square"></i></a></li>
+                            <li><a href="javascript:void(0);"><i class="map_show fa fa-map-marker"></i></a></li>
+                        </ul>
+                    </div>
+
+                    <div class="respond_clear"></div>
+
+                    <div class="col-lg-4 col-md-4 padbot30">
+                        <h4><b>Contacts</b> Me</h4>
+
+                        <!-- CONTACT FORM -->
+                        <div class="span9 contact_form">
+                            <div id="note"></div>
+                            <div id="fields">
+                                <form id="contact-form-face" class="clearfix" action="#">
+                                    <input type="text" name="name" value="Name" onFocus="if (this.value == 'Name') this.value = '';" onBlur="if (this.value == '') this.value = 'Name';" />
+                                    <textarea name="message" onFocus="if (this.value == 'Message') this.value = '';" onBlur="if (this.value == '') this.value = 'Message';">Message</textarea>
+                                    <input class="contact_btn" type="submit" value="Send message" />
+                                </form>
+                            </div>
+                        </div><!-- //CONTACT FORM -->
+                    </div>
+                </div><!-- //ROW -->
+                <div class="row copyright">
+                    <div class="col-lg-12 text-center">
+
+                        <p>Crafted with <i class="fa fa-heart"></i> by <a href="#">Justin Tisdale</a></p>
+                    </div>
+
+                </div><!-- //ROW -->
+            </div><!-- //CONTAINER -->
+            <!-- MAP -->
+            <div id="map">
+                <a class="map_hide" href="javascript:void(0);"><i class="fa fa-angle-right"></i><i class="fa fa-angle-left"></i></a>
+                <iframe src="http://maps.google.com/maps?f=q&amp;give%20a%20hand=s_q&amp;hl=en&amp;geocode=&amp;q=london&amp;sll=37.0625,-95.677068&amp;sspn=42.631141,90.263672&amp;ie=UTF8&amp;hq=&amp;hnear=London,+United+Kingdom&amp;ll=51.500141,-0.126257&amp;spn=0.026448,0.039396&amp;z=14&amp;output=embed"></iframe>
+            </div><!-- //MAP -->
+        </div>
+    </div>
+
+        <!-- Js -->
+        <script type="text/javascript" src="~/js/jquery.1.10.2.min.js"></script>
+        <script type="text/javascript" src="~/js/bootstrap.js"></script>
+        <script type="text/javascript" src="~/js/jquery-scrolltofixed.js"></script>
+        <script type="text/javascript" src="~/js/jquery.easing.1.3.js"></script>
+        <script type="text/javascript" src="~/js/jquery.isotope.js"></script>
+        <script type="text/javascript" src="~/js/wow.js"></script>
+        <script type="text/javascript" src="~/js/classie.js"></script>
+        <script src="~/contactform/contactform.js"></script>
+        <script src="~/Scripts/SyntaxHighlighter/shCore.js"></script>
+        <script src="~/Scripts/SyntaxHighlighter/shBrushJScript.js"></script>
+        <script>
+            SyntaxHighlighter.all();
+        </script>
+        <script src="~/js/classie.js"></script>
+        <script src="~/js/modalEffects.js"></script>
+        <!-- for the blur effect -->
+        <script>
+			    // this is important for IEs
+			    var polyfilter_scriptpath = '/js/';
+        </script>
+        <script src="~/js/cssParser.js"></script>
+        <script src="~/js/css-filters-polyfill.js"></script>
+
+</body>
+</html>
+
